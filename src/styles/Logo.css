@@ -1,0 +1,48 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+.logo .icon {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #1a73e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    position: relative;
+}
+
+.logo .icon::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #1a73e8;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo .icon::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 3px;
+    background-color: #1a73e8;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo .text {
+    font-size: 24px;
+}
+
+.logo .text span {
+    color: #ff5722;
+}
+

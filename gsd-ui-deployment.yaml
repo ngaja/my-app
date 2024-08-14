@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gsd-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gsd-ui
+  template:
+    metadata:
+      labels:
+        app: gsd-ui
+    spec:
+      containers:
+      - name: gsd-ui
+        image: bex/my-app:minikube-local
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gsd-ui-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: gsd-ui
+

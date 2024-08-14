@@ -1,0 +1,62 @@
+/* src/App.css */
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
+
+.header-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.header-links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px;
+}
+
+.header-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.login-button {
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* src/styles/App.css */
+
+/* Keyframes for the animation */
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Apply the animation to the paragraph */
+.moving-text {
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden;    /* Hides the overflowing text */
+  position: relative;
+  display: inline-block;
+  animation: moveLeftToRight 10s linear infinite; /* Adjust duration as needed */
+}
+
